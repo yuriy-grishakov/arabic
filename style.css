@@ -1,0 +1,150 @@
+/*   specification   */
+:root {
+	--noun: #21B10F;
+	--verb: #0B85F6;
+    --adj: #FA8A08;
+
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #000;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+    display: block;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid tomato;
+}
+
+.noun .accent {
+    color: var(--noun);
+}
+.verb .accent {
+    color: var(--verb);
+}
+.adj .accent {
+    color: var(--adj);
+}
+
+/* cards */
+
+.cards-list {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card {
+    width: 100%;
+    max-width: 350px;
+    padding: 30px 25px 38px;
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: block;
+}
+
+.card__img-block {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card__img-block img {
+    margin: auto;
+    flex-shrink: 0;
+    max-width: 100%;
+}
+
+.text {
+    text-align: center;
+}
+
+.text__word {
+    font-size: 64px;
+    font-family: "Noto Naskh Arabic", serif;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #F7F7F7;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.text__translation {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.text__pronunciation {
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 18px;
+}
+
+
+
+
+
+
+
+@media (max-width: 1499px) {
+    .cards-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .container {
+        width: 1110px;
+    }
+}
+
+@media (max-width: 1109px) {
+    .cards-list {
+        grid-template-columns: 1fr 1fr;
+    }
+    .container {
+        width: 700px;
+    }
+}
+
+@media (max-width: 699px) {
+    .cards-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card {
+        max-width: 100%;
+    }
+}
