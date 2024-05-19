@@ -138,13 +138,14 @@ p {
         display: flex;
         flex-direction: column;
         justify-content: center;
+	grid-gap: 22px;
     }
     .container {
         width: auto;
         margin-left: auto;
         margin-right: auto;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 22px;
+	padding-right: 22px;
     }
     .card {
         max-width: 100%;
